@@ -5,5 +5,5 @@ lb config noauto \
 	-b iso \
 	--archive-areas "main non-free contrib" \
 	--apt-indices false \
-	--bootappend-live quiet noeject \
+	--bootappend-live quiet \
 	"${@}"
