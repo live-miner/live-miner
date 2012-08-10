@@ -18,7 +18,7 @@ for PARAMETER in $(</proc/cmdline); do
 done
 
 while true; do
-	(cd /opt/poclbm; PATH="/opt/adl3:$PATH" python poclbm.py \
+	(cd /opt/poclbm; PYTHONPATH='/opt/adl3' python poclbm.py \
 		-d 0 \
 		$BITLIVE_ARGS \
 		$BITLIVE_URLS 
