@@ -1,2 +1,4 @@
 Terminal:x-terminal-emulator
 poclbm:x-terminal-emulator -e /usr/local/bin/poclbm-wrapper
+Reboot:sudo reboot
+Power off:sudo poweroff
