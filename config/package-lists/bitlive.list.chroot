@@ -1,0 +1,17 @@
+fglrx-control
+fglrx-driver
+mesa-utils
+windowlab
+sakura
+xorg
+xserver-xorg-video-vesa
+xterm
+
+amd-opencl-icd
+python-pyopencl
+
+htop
+psmisc
+tmux
+tree
+vim-gtk
