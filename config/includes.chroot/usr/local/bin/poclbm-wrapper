@@ -1,0 +1,27 @@
+#!/bin/bash
+
+set -eu
+
+if test -f /live/image/live/bitlive.conf; then
+	source /live/image/live/bitlive.conf
+fi
+
+for PARAMETER in $(</proc/cmdline); do
+	case "$PARAMETER" in
+	bitlive.urls=*)
+		printf -v BITLIVE_URLS %b "${PARAMETER#bitlive.urls=}"
+		;;
+	bitlive.args=*)
+		printf -v BITLIVE_ARGS %b "${PARAMETER#bitlive.args=}"
+		;;
+	esac
+done
+
+while true; do
+	(cd /opt/poclbm; PATH="/opt/adl3:$PATH" python poclbm.py \
+		-d 0 \
+		$BITLIVE_ARGS \
+		$BITLIVE_URLS 
+	)
+	sleep 1
+done
