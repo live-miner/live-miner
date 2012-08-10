@@ -2,9 +2,9 @@
 
 lb config noauto \
 	-d sid \
-	-b net \
+	-b iso \
+	--bootloader grub2 \
 	--archive-areas "main non-free contrib" \
 	--apt-indices false \
-	--bootappend-live 'live-config.xorg-driver=fglrx' \
 	--memtest none \
 	"${@}"
