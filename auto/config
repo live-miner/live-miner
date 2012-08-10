@@ -3,8 +3,6 @@
 lb config noauto \
 	-d sid \
 	-b iso \
-	--bootloader grub2 \
 	--archive-areas "main non-free contrib" \
 	--apt-indices false \
-	--memtest none \
 	"${@}"
