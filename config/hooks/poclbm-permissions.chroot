@@ -1,0 +1,8 @@
+#!/bin/sh
+
+set -eu
+
+# poclbm wants to write a cache file into its working direcctory,
+# which has to be its own directory so that it can find its
+# OpenCL program.
+chmod a+w /opt/poclbm
