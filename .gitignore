@@ -1,0 +1,15 @@
+binary/
+binary.contents
+binary.packages
+.build/
+build.log
+cache/
+chroot/
+chroot.packages.install
+chroot.packages.live
+config/binary
+config/bootstrap
+config/chroot
+config/common
+config/source
+.lock
