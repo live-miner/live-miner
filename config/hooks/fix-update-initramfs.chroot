@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# Workaround for #684423
+
+set -eu
+
+ln -sf ../../bin/live-update-initramfs /usr/sbin/update-initramfs
