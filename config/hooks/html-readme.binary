@@ -1,0 +1,6 @@
+#!/bin/bash
+
+set -eu
+
+asciidoc binary/README.txt
+todos binary/README.{html,txt}
