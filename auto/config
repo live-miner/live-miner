@@ -3,7 +3,7 @@
 lb config noauto \
 	-f minimal \
 	-d sid \
-	-b iso \
+	-b iso-hybrid \
 	--apt-recommends false \
 	--archive-areas "main non-free contrib" \
 	--apt-indices false \
