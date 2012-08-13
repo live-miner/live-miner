@@ -1,8 +1,10 @@
 binary/
 binary.contents
-binary.packages
+binary.hybrid.iso
+binary.hybrid.iso.zsync.xz
 binary.iso
 binary.iso.zsync.xz
+binary.packages
 .build/
 build.log
 cache/
