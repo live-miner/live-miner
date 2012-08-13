@@ -1,17 +1,44 @@
+# fglrx
 fglrx-control
 fglrx-driver
 mesa-utils
+
+# user interface
+gnome-terminal
 windowlab
-sakura
 xorg
 xserver-xorg-video-vesa
 xterm
 
+# opencl
+amd-clinfo
 amd-opencl-icd
 python-pyopencl
 
+# useful tools
 htop
+less
 psmisc
 tmux
 tree
 vim-gtk
+
+# hooks
+patch
+
+# only recommended by live-config
+live-tools
+sudo
+user-setup
+
+# only recommended by fglrx-driver
+fglrx-modules-dkms
+
+# only recommended by dkms
+linux-headers-amd64
+
+# only recommended by live-boot
+eject
+file
+rsync
+uuid-runtime

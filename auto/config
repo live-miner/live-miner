@@ -1,8 +1,10 @@
 #!/bin/sh
 
 lb config noauto \
+	-f minimal \
 	-d sid \
 	-b iso \
+	--apt-recommends false \
 	--archive-areas "main non-free contrib" \
 	--apt-indices false \
 	--bootappend-live quiet \
