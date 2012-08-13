@@ -1,0 +1,21 @@
+#!/bin/bash
+
+set -eu
+
+# Distributing fglrx.ko would be a license violation, so we remove it from
+# the built imge, and instead build it after the system has booted
+
+# the output of 'dkms status' looks like this:
+#   fglrx, 12-6+point, 3.2.0-3-amd64, x86_64: installed
+
+dkms status fglrx | while read MOD VER KVER ARCH STATUS; do
+	dkms remove fglrx/${VER%,} --all
+done
+
+FGLRX=fglrx.ko
+FOUND_FGLRX=$(find /lib/modules /var/lib/dkms -name "$FGLRX")
+if [[ -n $FOUND_FGLRX ]]; then
+	echo "error: found $FGLRX in the following locations:"
+	echo "$FOUND_FGLRX"
+	exit 1
+fi

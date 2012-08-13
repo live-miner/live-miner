@@ -40,6 +40,8 @@ Explain network booting.
 Automatically run one instance of poclbm for each ATI graphics card in the
 system.
 
+Switch distribution to wheezy (`fglrx` has not migrated yet).
+
 Acknowledgements
 ----------------
 
