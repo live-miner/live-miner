@@ -1,0 +1,5 @@
+#!/bin/sh
+
+set -eu
+
+glib-compile-schemas /usr/share/glib-2.0/schemas

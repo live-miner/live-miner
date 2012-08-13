@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="apps">
+		<dir name="gnome-terminal">
+			<dir name="profiles">
+				<dir name="Default">
+					<entry name="use_system_font" type="bool" value="false"/>
+					<entry name="use_theme_colors" type="bool" value="false"/>
+					<entry name="default_show_menubar" type="bool" value="false"/>
+					<entry name="font" type="string">
+						<stringvalue>Monospace 9</stringvalue>
+					</entry>
+					<entry name="background_color" type="string">
+						<stringvalue>white</stringvalue>
+					</entry>
+					<entry name="foreground_color" type="string">
+						<stringvalue>black</stringvalue>
+					</entry>
+				</dir>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

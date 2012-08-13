@@ -42,3 +42,6 @@ eject
 file
 rsync
 uuid-runtime
+
+# needed to compile gsettings overrides
+libglib2.0-bin
