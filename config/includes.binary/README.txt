@@ -30,7 +30,7 @@ In order to escape spaces in boot parameters, use octal. For instance:
 Bugs
 ----
 
-The boot loader defaults to the failsafe kernel.
+None!
 
 TODO
 ----

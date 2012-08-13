@@ -1,0 +1,8 @@
+#!/bin/sh
+
+set -eu
+
+# http://bugs.debian.org/682957
+if test -f binary/isolinux/live.cfg; then
+	sed -i -e '/menu default/d' binary/isolinux/live.cfg
+fi
