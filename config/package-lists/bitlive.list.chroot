@@ -45,3 +45,6 @@ uuid-runtime
 
 # needed to compile gsettings overrides
 libglib2.0-bin
+
+# handle power button events
+acpi-support-base
