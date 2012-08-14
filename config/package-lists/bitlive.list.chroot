@@ -21,7 +21,7 @@ less
 psmisc
 tmux
 tree
-vim-gtk
+vim
 
 # hooks
 patch
