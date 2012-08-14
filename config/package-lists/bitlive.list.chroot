@@ -1,14 +1,18 @@
 # fglrx
 fglrx-control
 fglrx-driver
-mesa-utils
 
-# user interface
+# x11 environment
 gnome-terminal
 windowlab
-xorg
+xauth
+xinit
+xserver-xorg
+xserver-xorg-input-evdev
 xserver-xorg-video-vesa
 xterm
+x11-utils
+x11-xserver-utils
 
 # opencl
 amd-clinfo
