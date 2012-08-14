@@ -15,5 +15,8 @@ config/binary
 config/bootstrap
 config/chroot
 config/common
+config/packages.chroot/xsettingsd_*.deb
 config/source
+external/*.deb
+external/*.changes
 .lock
