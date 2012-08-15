@@ -4,6 +4,3 @@
 [submodule "config/includes.chroot/opt/adl3"]
 	path = config/includes.chroot/opt/adl3
 	url = ../adl3.git
-[submodule "external/xsettingsd"]
-	path = external/xsettingsd
-	url = https://github.com/derat/xsettingsd.git
