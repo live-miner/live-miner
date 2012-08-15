@@ -2,17 +2,17 @@
 
 set -eu
 
-if test -f /live/image/live/bitlive.conf; then
-	source /live/image/live/bitlive.conf
+if test -f /live/image/live/live-miner.conf; then
+	source /live/image/live/live-miner.conf
 fi
 
 for PARAMETER in $(</proc/cmdline); do
 	case "$PARAMETER" in
-	bitlive.urls=*)
-		printf -v BITLIVE_URLS %b "${PARAMETER#bitlive.urls=}"
+	live-miner.urls=*)
+		printf -v LIVE_MINER_URLS %b "${PARAMETER#live-miner.urls=}"
 		;;
-	bitlive.args=*)
-		printf -v BITLIVE_ARGS %b "${PARAMETER#bitlive.args=}"
+	live-miner.args=*)
+		printf -v LIVE_MINER_ARGS %b "${PARAMETER#live-miner.args=}"
 		;;
 	esac
 done
@@ -20,8 +20,8 @@ done
 while true; do
 	(cd /opt/poclbm; PYTHONPATH='/opt/adl3' python poclbm.py \
 		-d 0 \
-		$BITLIVE_ARGS \
-		$BITLIVE_URLS 
+		$LIVE_MINER_ARGS \
+		$LIVE_MINER_URLS
 	)
 	sleep 1
 done

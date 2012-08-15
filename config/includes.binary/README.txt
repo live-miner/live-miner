@@ -1,5 +1,5 @@
-Bitlive
-=======
+live-miner
+==========
 Sam Morris <sam@robots.org.uk>
 
 Burn this image to a CD, or write it to a USB stick, and when booted a system
@@ -19,7 +19,7 @@ Configuration
 Configuration happens in two places:
 
  1. Boot parameters
- 2. Configuration file (`live/bitlive.conf`)
+ 2. Configuration file (`live/live-miner.conf`)
 
 Values from boot parameters override values from the file, so use them if you
 don't want to remaster the CD. If you are booting several systems then use
@@ -27,9 +27,9 @@ the boot parameters in combination with network booting.
 
 In order to escape spaces in boot parameters, use octal. For instance:
 
-    bitlive.urls=http://user:pass@host0:port\040http://user:pass@host1:port
+    live-miner.urls=http://user:pass@host0:port\040http://user:pass@host1:port
 
-See `live/bitlive.conf` for the list of options, and their corresponding boot
+See `live/live-miner.conf` for the list of options, and their corresponding boot
 parameters.
 
 Bugs
