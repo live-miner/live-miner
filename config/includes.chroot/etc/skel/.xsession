@@ -6,4 +6,4 @@ xsetroot -cursor_name left_ptr
 x-terminal-emulator -e /usr/local/bin/poclbm-wrapper &
 x-terminal-emulator -e 'watch /opt/adl3/atitweak --status' &
 
-. /etc/X11/xinit/xinitrc
+exec windowlab -font '-*-sans-medium-r-*-*-*-80-*-*-*-*-*-*'
