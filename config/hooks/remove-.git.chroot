@@ -1,0 +1,3 @@
+#!/bin/sh
+
+find /opt -name .git -exec rm -rf {} +
