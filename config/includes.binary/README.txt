@@ -21,16 +21,19 @@ Configuration happens in two places:
  1. Boot parameters
  2. Configuration file (`live/live-miner.conf`)
 
-Values from boot parameters override values from the file, so use them if you
-don't want to remaster the CD. If you are booting several systems then use
-the boot parameters in combination with network booting.
+See `live/live-miner.conf` for the list of options and their corresponding boot
+parameters.
 
-In order to escape spaces in boot parameters, use octal. For instance:
+Values from boot parameters override values from the file, so use them if you
+don't want to remaster the CD. To edit them, press `tab` at the boot menu and
+then hit enter to boot. In order to escape spaces in boot parameters, use
+octal. For instance:
 
     live-miner.urls=http://user:pass@host0:port\040http://user:pass@host1:port
 
-See `live/live-miner.conf` for the list of options, and their corresponding boot
-parameters.
+If you are regularly rebooting, or are mining with several systems then you
+should set up network booting, and customize the parameters in your `PXELINUX`
+configuration.
 
 Bugs
 ----
