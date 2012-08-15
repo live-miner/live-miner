@@ -1,7 +1,6 @@
 #!/bin/sh
 
 lb config noauto \
-	-f minimal \
 	-d sid \
 	-b iso-hybrid \
 	--apt-recommends false \
