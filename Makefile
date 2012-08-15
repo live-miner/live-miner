@@ -1,7 +1,8 @@
 GETROOT := sudo
+SHELL := /bin/bash
 
 .PHONY: binary
 binary:
 	$(GETROOT) lb clean
 	lb config
-	time -p $(GETROOT) lb build
+	time $(GETROOT) lb build
