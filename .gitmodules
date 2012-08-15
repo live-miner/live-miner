@@ -1,9 +1,9 @@
 [submodule "config/includes.chroot/opt/poclbm"]
 	path = config/includes.chroot/opt/poclbm
-	url = https://github.com/m0mchil/poclbm.git
+	url = ../poclbm.git
 [submodule "config/includes.chroot/opt/adl3"]
 	path = config/includes.chroot/opt/adl3
-	url = https://github.com/mjmvisser/adl3.git
+	url = ../adl3.git
 [submodule "external/xsettingsd"]
 	path = external/xsettingsd
 	url = https://github.com/derat/xsettingsd.git
