@@ -1,3 +1,4 @@
+.lock
 binary/
 binary.contents
 binary.hybrid.iso
@@ -17,4 +18,8 @@ config/chroot
 config/common
 config/packages.chroot/xsettingsd_*.deb
 config/source
-.lock
+source/
+source.debian-live.list
+source.debian-live.tar.xz
+source.debian.list
+source.debian.tar.xz
