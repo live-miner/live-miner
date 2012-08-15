@@ -6,4 +6,8 @@ lb config noauto \
 	--archive-areas "main non-free contrib" \
 	--apt-indices false \
 	--bootappend-live quiet \
+	--hdd-label LIVE-MINER \
+	--iso-application live-miner \
+	--iso-publisher 'live-miner; http://live-miner.github.com/' \
+	--iso-volume "live-miner $(date +%Y%m%d-%H:%M)" \
 	"${@}"
