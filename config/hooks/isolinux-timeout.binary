@@ -2,6 +2,10 @@
 
 set -eu
 
-if test -f binary/isolinux/isolinux.cfg; then
-	sed -i -e 's/timeout 0/timeout 50/' binary/isolinux/isolinux.cfg
-fi
+
+for file in binary/isolinux/isolinux.cfg binary/syslinux/syslinux.cfg tftpboot/pxelinux.cfg/default; do
+	if ! test -f "$file"; then
+		continue;
+	fi
+	sed -i -e 's/timeout 0/timeout 50/' $file
+done

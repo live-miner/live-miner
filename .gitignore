@@ -5,6 +5,7 @@ binary.hybrid.iso
 binary.hybrid.iso.zsync.xz
 binary.iso
 binary.iso.zsync.xz
+binary.netboot.tar.xz
 binary.packages
 .build/
 build.log
@@ -23,3 +24,4 @@ source.debian-live.list
 source.debian-live.tar.xz
 source.debian.list
 source.debian.tar.xz
+tftpboot/

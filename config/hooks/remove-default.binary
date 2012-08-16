@@ -3,6 +3,9 @@
 set -eu
 
 # http://bugs.debian.org/682957
-if test -f binary/isolinux/live.cfg; then
-	sed -i -e '/menu default/d' binary/isolinux/live.cfg
-fi
+for file in binary/isolinux/live.cfg binary/syslinux/live.cfg tftpboot/live.cfg; do
+	if ! test -f "$file"; then
+		continue;
+	fi
+	sed -i -e '/menu default/d' "$file"
+done
