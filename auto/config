@@ -10,4 +10,5 @@ lb config noauto \
 	--iso-application live-miner \
 	--iso-publisher 'live-miner; http://live-miner.github.com/' \
 	--iso-volume "live-miner $(date +%Y%m%d-%H:%M)" \
+	--compression none \
 	"${@}"
