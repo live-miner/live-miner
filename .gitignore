@@ -19,6 +19,7 @@ config/chroot
 config/common
 config/packages.chroot/xsettingsd_*.deb
 config/source
+output/
 source/
 source.debian-live.list
 source.debian-live.tar.xz

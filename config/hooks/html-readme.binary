@@ -2,5 +2,5 @@
 
 set -eu
 
-asciidoc binary/README.txt
-todos binary/README.{html,txt}
+asciidoc -b html5 binary/README.txt
+todos binary/README.txt

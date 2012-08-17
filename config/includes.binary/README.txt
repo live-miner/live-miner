@@ -38,38 +38,38 @@ depend on how you are going to boot:
 USB stick
 ~~~~~~~~~
 
-Write `binary.hybrid.iso` to your USB stick. On Linux, you can do something
-like this:
+Write `binary.img` to your USB stick. On Linux, you can do something like this:
 
 ----
-dd if=binary.hybrid.iso of=/dev/sdX
+dd if=binary.img of=/dev/sdX
 ----
 
 This will erase anything already on the device, so make sure you aren't
 accidentally overwriting your hard disk! On Windows you can use a program such
 as https://launchpad.net/win32-image-writer[Image Writer for Windows].
 
-Once the image is written, remove and re-insert the USB stick, which should now
-contain the live-miner files. Once you edit `live/live-miner.conf`, you can
-boot from the USB stick and your computer should begin mining.
+Once the image is written, remove and re-insert the USB stick. You should now
+be able to edit `live/live-miner.conf`. Once you have done so, boot from the
+USB stick and your computer should begin mining.
 
 CD/DVD
 ~~~~~~
 
-When you boot from the CD, you'll be presented with a menu. Press the Tab key
-and then append boot parameters to the line that appears. Press Enter to boot.
+While `binary.iso` can be written to a CD and booted without any further
+chances, you will have to do your configuration at the boot menu, which is not
+very convenient. To do so, press the Tab key, and then append boot parameters
+to the list that appears. Press Enter to actually boot.
 
-If you will be rebooting often, or have several computers to configure, you
-should remaster the CD with an edited `live/live-miner.conf` file to save
-yourself from having to type out the parameters manually; or you can boot from
-the network.
+If you will be rebooting often, or have several computers to configure, you can
+save time and effort by by remastering the CD with an edited
+`live/live-miner.conf`, or by booting with a different method.
 
 Network
 ~~~~~~~
 
 The netboot archive contains two directories: `debian-live`, the contents of
 which should be shared over NFS; and `tftpboot`, the contents of which should
-be available via TFTP. Setting this up required some co-ordination between your
+be available via TFTP. Setting this up requires some co-ordination between your
 DHCP, TFTP and NFS servers. I use the same machine running Debian for all
 three, on `10.0.0.1`. My setup is something like the following:
 
@@ -126,27 +126,23 @@ $ git submodule update
 $ make
 ----
 
-This will create `binary.hybrid.iso` which can be burned to a CD or written to
-a USB stick. To create the netboot image instead, run:
+This will build three images (in `output/{hdd,iso,netboot}`) and collect the
+source archives in `output/source`. Unless you really want all three and/or are
+planning on distributing your built image to a third party, you can save time
+by building just what you want: run `make output/stamp-hdd`, `make
+output/stamp-iso` or `make output/netboot` instead.
 
-----
-$ make BINARY_IMAGES=netboot
-----
-
-*Important legal stuff*: If you are going to distribute the images you build,
-you should add `SOURCE=true` to your `make` command line. The resulting
-`source.debian-live.tar.xz` and `source.debian.tar.xz` files should be
-distributed along with your binary images. This is necessary in order to comply
-with the components of live-miner that are licensed under the GPL (and similar
-licenses).
+*Important legal stuff*: If you are going to distribute the images you build
+then be sure to do the full build of all three binary images, plus the source
+archives. If you distribute a binary image to a third party, you must also
+(offer to) give them the source archives as well. This is necessary because
+live-miner contains materials licensed under the GPL (and similar licenses).
 
 TODO
 ----
 
 Automatically run one instance of poclbm for each ATI graphics card in the
 system.
-
-Switch distribution to wheezy (`fglrx` has not migrated yet).
 
 Use `aticonfig` to detect whether the Xorg driver should be forced to `fglrx`.
 
