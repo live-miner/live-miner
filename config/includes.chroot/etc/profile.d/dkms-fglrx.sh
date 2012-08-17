@@ -8,7 +8,7 @@ if [[ -z "${DISPLAY}" && $(tty) = /dev/tty1 ]]; then
 	# configuration file; this will enable driver auto-detection and should result
 	# in the vesa module being used.
 	if [[ -z $(find /lib/modules/$(uname -r) -name fglrx.ko) ]]; then
-		rm -f /etc/X11/xorg.conf.d/99-live.conf
+		sudo rm -f /etc/X11/xorg.conf.d/99-live.conf
 	fi
 fi
 
