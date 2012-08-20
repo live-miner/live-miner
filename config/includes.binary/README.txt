@@ -16,6 +16,11 @@ Requirements
 
 An x86_64 PC with an AMD Radeon HD 5000, 6000 or 7000 series graphics card.
 
+Downloads
+---------
+
+http://live-miner.github.com/releases.html[Download live-miner here!]
+
 Configuration
 -------------
 
