@@ -5,7 +5,13 @@ BINARY_IMAGES := iso hdd netboot
 BINARY_STAMPS := $(addprefix output/stamp-,$(BINARY_IMAGES))
 
 .PHONY: all
-all: $(BINARY_STAMPS) output/stamp-source
+all: $(BINARY_STAMPS) output/stamp-source output/SHA256SUMS.asc
+
+output/SHA256SUMS.asc: output/SHA256SUMS
+	gpg -u 0x8FD7D18C -b -a $<
+
+output/SHA256SUMS:
+	(cd output && find $(BINARY_IMAGES) source -type f -exec sha256sum -b {} +) > $@
 
 output/stamp-source: $(BINARY_STAMPS)
 	mkdir -p output/source_cache
