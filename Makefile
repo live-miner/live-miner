@@ -52,5 +52,5 @@ output/stamp-%:
 	$(GETROOT) lb build
 	rm -rf output/$*
 	mkdir -p output/$*
-	mv binary.* build.log output/$*
+	mv -v binary.* build.log output/$*
 	touch $@
