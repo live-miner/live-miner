@@ -2,8 +2,8 @@
 
 set -eu
 
-if test -f /live/image/live/live-miner.conf; then
-	source /live/image/live/live-miner.conf
+if test -f /etc/live-miner.conf; then
+	source /etc/live-miner.conf
 fi
 
 for PARAMETER in $(</proc/cmdline); do
