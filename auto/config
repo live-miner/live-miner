@@ -11,4 +11,6 @@ lb config noauto \
 	--iso-publisher 'live-miner; http://live-miner.github.com/' \
 	--iso-volume "live-miner $(date +%Y%m%d-%H:%M)" \
 	--compression none \
+	--bootloader grub2 \
+	--templates config/templates \
 	"${@}"
