@@ -3,8 +3,6 @@
 # Copy the config file out of the read-only image mount; the user
 # can then edit the file at run-time if they wish.
 
-set -eu
-
-cp /live/image/live/live-miner.conf /etc/live-miner.conf
+cp /lib/live/mount/medium/live/live-miner.conf /etc/live-miner.conf
 
 # vim: ft=sh
