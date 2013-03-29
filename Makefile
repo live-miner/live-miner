@@ -4,6 +4,10 @@ SHELL := /bin/bash
 BINARY_IMAGES := iso hdd netboot
 BINARY_STAMPS := $(addprefix output/stamp-,$(BINARY_IMAGES))
 
+BINARY_OUTPUTS_iso := binary.iso binary.iso.zsync
+BINARY_OUTPUTS_hdd := binary.img
+BINARY_OUTPUTS_netboot := binary.netboot.tar
+
 .PHONY: all
 all: $(BINARY_STAMPS) output/stamp-source output/SHA256SUMS.asc
 
@@ -52,5 +56,5 @@ output/stamp-%:
 	$(GETROOT) lb build
 	rm -rf output/$*
 	mkdir -p output/$*
-	mv -v binary.* build.log output/$*
+	mv -v binary.contents binary.packages build.log $(BINARY_OUTPUTS_$*) output/$*
 	touch $@
