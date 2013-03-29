@@ -3,7 +3,7 @@
 set -eu
 
 # Distributing fglrx.ko would be a license violation, so we remove it from
-# the built imge, and instead build it after the system has booted
+# the built image, and instead build it after the system has booted.
 
 # the output of 'dkms status' looks like this:
 #   fglrx, 12-6+point, 3.2.0-3-amd64, x86_64: installed
