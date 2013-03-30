@@ -1,0 +1,4 @@
+# We may be minimal, but we are not uncivilized!
+# This is not performed by the live-config locale hook, because it requires the
+# locales package to be installed.
+LANG=C.UTF-8
