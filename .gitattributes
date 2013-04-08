@@ -1,0 +1,4 @@
+* text=auto
+
+config/includes.binary/README.html text=crlf
+config/includes.binary/README.txt text=crlf
