@@ -4,8 +4,6 @@
 
 Section "ServerLayout"
 	Identifier "aticonfig Layout"
-	#Screen     0 "s0" 0 0
-	#Screen     1 "s1" RightOf "s0"
 	Screen     "s0" 0 0
 	Screen     "s1" RightOf "s0"
 EndSection

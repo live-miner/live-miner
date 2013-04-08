@@ -1,0 +1,19 @@
+Xorg_config () {
+	echo -n ' xorg-config'
+
+	# A user-provided Xorg.conf will be used verbatim
+	if [ -f /lib/live/mount/medium/live/xorg.conf ]
+	then
+		cp /lib/live/mount/medium/live/xorg.conf /etc/X11/xorg.conf
+		return
+	fi
+
+	if /usr/local/bin/genxorg >/etc/X11/xorg.conf.temp 2>/var/log/live/genxorg.log; then
+		mv /etc/X11/xorg.conf.temp /etc/X11/xorg.conf
+		return
+	fi
+}
+
+Xorg_config
+
+# vim: ft=sh
