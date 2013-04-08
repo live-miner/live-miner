@@ -19,7 +19,6 @@ done
 
 while true; do
 	(cd /opt/poclbm; PYTHONPATH='/opt/adl3' python poclbm.py \
-		-d 0 \
 		$LIVE_MINER_ARGS \
 		$LIVE_MINER_URLS
 	)
