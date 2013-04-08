@@ -1,0 +1,33 @@
+# Sample Xorg config file for a system with two ATI cards.
+# Rename this file to 'xorg.conf' and it will be used when
+# live-miner boots up.
+
+Section "ServerLayout"
+	Identifier "aticonfig Layout"
+	#Screen     0 "s0" 0 0
+	#Screen     1 "s1" RightOf "s0"
+	Screen     "s0" 0 0
+	Screen     "s1" RightOf "s0"
+EndSection
+
+Section "Device"
+	Identifier "d0"
+	Driver     "fglrx"
+	BusID      "PCI:1:0:0"
+EndSection
+
+Section "Device"
+	Identifier "d1"
+	Driver     "fglrx"
+	BusID      "PCI:6:0:0"
+EndSection
+
+Section "Screen"
+	Identifier "s0"
+	Device     "d0"
+EndSection
+
+Section "Screen"
+	Identifier "s1"
+	Device     "d1"
+EndSection
