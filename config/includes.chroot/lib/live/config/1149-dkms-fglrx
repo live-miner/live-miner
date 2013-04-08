@@ -3,7 +3,7 @@ Fglrx () {
 
 	# fglrx.ko can not be redistributed, so it is not included in the image.
 	# Instead, build it now.
-	dpkg-reconfigure fglrx-modules-dkms
+	dpkg-reconfigure fglrx-modules-dkms > /var/log/live/dkms-fglrx.log 2>&1
 }
 
 Fglrx
