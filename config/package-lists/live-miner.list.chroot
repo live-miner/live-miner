@@ -3,14 +3,14 @@ fglrx-control
 fglrx-driver
 
 # x11 environment
+i3-wm
+suckless-tools
 gnome-terminal
-windowlab
 xauth
 xinit
 xserver-xorg
 xserver-xorg-input-evdev
 xserver-xorg-video-vesa
-xterm
 x11-utils
 x11-xserver-utils
 
