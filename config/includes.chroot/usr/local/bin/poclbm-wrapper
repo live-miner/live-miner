@@ -2,25 +2,30 @@
 
 set -eu
 
-if test -f /etc/live-miner.conf; then
-	source /etc/live-miner.conf
-fi
+while :; do
+	set +e
+	(
+		set -e
+		if [[ -f /etc/live-miner.conf ]]; then
+			source /etc/live-miner.conf
+		fi
 
-for PARAMETER in $(</proc/cmdline); do
-	case "$PARAMETER" in
-	live-miner.urls=*)
-		printf -v LIVE_MINER_URLS %b "${PARAMETER#live-miner.urls=}"
-		;;
-	live-miner.args=*)
-		printf -v LIVE_MINER_ARGS %b "${PARAMETER#live-miner.args=}"
-		;;
-	esac
-done
+		for PARAMETER in $(</proc/cmdline); do
+			case "$PARAMETER" in
+			live-miner.urls=*)
+				printf -v LIVE_MINER_URLS %b "${PARAMETER#live-miner.urls=}"
+				;;
+			live-miner.args=*)
+				printf -v LIVE_MINER_ARGS %b "${PARAMETER#live-miner.args=}"
+				;;
+			esac
+		done
 
-while true; do
-	(cd /opt/poclbm; PYTHONPATH='/opt/adl3' python poclbm.py \
-		$LIVE_MINER_ARGS \
-		$LIVE_MINER_URLS
+		cd /opt/poclbm
+		PYTHONPATH='/opt/adl3' python poclbm.py \
+			$LIVE_MINER_ARGS \
+			$LIVE_MINER_URLS
 	)
-	sleep 1
+	set -e
+	sleep 5
 done
