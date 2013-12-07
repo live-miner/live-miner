@@ -1,10 +1,10 @@
-#!/bin/sh
+#!/bin/bash
 
 set -eu
 
 for file in binary/isolinux/isolinux.cfg binary/syslinux/syslinux.cfg tftpboot/pxelinux.cfg/default; do
-	if ! test -f "$file"; then
-		continue;
+	if [[ ! -f $file ]]; then
+		continue
 	fi
 	sed -i -e 's/timeout 0/timeout 50/' $file
 done
