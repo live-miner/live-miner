@@ -55,3 +55,6 @@ libglib2.0-bin
 
 # handle power button events
 acpi-support-base
+
+# networking
+wpasupplicant

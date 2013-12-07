@@ -2,7 +2,6 @@
 
 set -eu
 
-
 for file in binary/isolinux/isolinux.cfg binary/syslinux/syslinux.cfg tftpboot/pxelinux.cfg/default; do
 	if ! test -f "$file"; then
 		continue;
