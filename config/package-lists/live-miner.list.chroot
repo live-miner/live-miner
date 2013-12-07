@@ -58,3 +58,6 @@ acpi-support-base
 
 # networking
 wpasupplicant
+
+# handle files with CRLF line endings
+tofrodos

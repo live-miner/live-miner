@@ -4,6 +4,7 @@ Live_miner () {
 	# Copy the config file out of the read-only image mount; the user
 	# can then edit the file at run-time if they wish.
 	cp /lib/live/mount/medium/live/live-miner.conf /etc/live-miner.conf
+	fromdos /etc/live-miner.conf
 }
 
 Live_miner

@@ -5,6 +5,7 @@ Xorg_config () {
 	if [ -f /lib/live/mount/medium/live/xorg.conf ]
 	then
 		cp /lib/live/mount/medium/live/xorg.conf /etc/X11/xorg.conf
+		fromdos /etc/X11/xorg.conf
 		return
 	fi
 
